@@ -5,7 +5,7 @@ const ObjectId = require('mongodb').ObjectId;
 const cors = require('cors');
 require('dotenv').config()
 const app = express();
-const port = process.env.PORT||5000;
+const port = process.env.PORT || 5000;
 
 // middleware
 app.use(cors());
@@ -45,7 +45,7 @@ async function run() {
 
             const result = await servicesCollection.insertOne(food);
             // console.log('hit the post api');
-            console.log(food);
+            // console.log(food);
             res.json(result)
         })
 
